@@ -1,0 +1,290 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar .sticky{
+    padding: 15px 0;
+    background:white;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: #FAFA33; 
+    transition: all 0.3s ease;
+}
+.navbar .sticky .logo a span{
+    color: #FAFA33;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #FAFA33;
+}
+.navbar .sticky .menu li a:hover{
+    color: black;
+}
+/* menu btn styling */
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: Tomato;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn .show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+/* home section styling */
+.home{
+    display: flex;
+   /*background: url("images/portada.jpg") no-repeat center;*/
+    background-color:black;
+    opacity: 50%;
+    height: 10vh;
+    color: white;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 30px;
+}
+
+
+/* responsive media query start */
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px){
+    
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+
+}
+
+
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------*/
+
+
+
+  /*MENU + LOGO + ICONO DE MENU DESPLEGABLE*/
+	.header-principal{ width: 100%; }
+	.nav-principal{
+		width: 100%;
+        height: 55px;
+		position: relative;
+		padding-bottom: 0.5em;
+		background-color:tomato;
+        padding: 10px;
+	}
+	.contenedor{
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		margin: auto;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		align-items: flex-start;
+	}
+	.img-portada{
+		width: 50%;
+		margin-left: -80px;
+		margin-top: 5px;
+	}
+	/*.logo{
+		font-size: 1.75em;
+		font-weight: normal;
+		font-family: sans-serif;
+		margin-top: 0.1em;
+	}*/
+	.logo-link{
+		text-decoration: none;
+		color: black;
+	}
+	.menu2{
+		position: absolute;
+		top: 55px;
+		width: 100%;
+        height: auto;
+		left: 0;
+		right: -10px;
+		background-color: tomato;
+		padding: auto;
+		margin: 0;
+		list-style: none;
+		text-align: left;
+		font-family: sans-serif;
+		height: 0; /*altura*/
+		overflow: hidden;
+		transition: height .3s linear;
+		z-index: 999;
+        text-align: center;
+        font-size: 1.5em;
+	}
+	.menu2:hover {
+	    color: black;
+	}
+	.menu2-link{
+	    display: block;
+	    padding: 10px;
+	    color: black;
+	    text-decoration: none;
+	}
+	.menu2-link:hover{ 
+        background-color: white; 
+    }
+	.icon-menu{
+		display: block;
+		width: 30px;
+		height: 30px;
+		color: black;
+		position: absolute;
+		right: 20px;
+		font-size: 1.5em;
+		line-height: 40px;
+		text-align: center;
+		cursor: pointer;
+        
+	}
+	.mostrar{ height: 300px; }
+
+    
+/* RESPONSIVE */
+@media  screen and (min-width: 768px) {
+
+}
+
+@media  screen and (min-width: 1023px) {
+    .nav-principal{
+        height: 65px;
+    }
+	.icon-menu{
+		display: none;
+	}
+	.menu2{
+		position: static;
+		display: flex; 
+		height: auto;
+		width: auto;
+        border: 2px solid tomato;
+	}
+    .menu2-link:hover{ 
+        background-color: white; 
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+}
+
